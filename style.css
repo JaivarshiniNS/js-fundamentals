@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: #111;
+}
+.header-row {
+  display: flex;
+  justify-content: center; /* Center align horizontally */
+  margin-bottom: 30px; /* Space between heading and timeline */
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 100px 0;
+  background-color: #111;
+}
+
+.main-heading {
+  font-size: 36px; /* Adjust the size as needed */
+  font-weight: 500;
+  color: white; /* Or any color that suits your design */
+  text-align: center;
+  margin-bottom: 30px; /* Space between heading and timeline */
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+}
+
+.timeline {
+  width: 80%;
+  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline ul {
+  list-style: none;
+}
+
+.timeline ul li {
+  padding: 30px;
+  background-color: #1e1f22;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+}
+
+.timeline ul li:last-child {
+  margin-bottom: 0;
+}
+
+.timeline ul li:hover {
+  transform: translateY(-10px); /* Lift box on hover */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+/* Glowing effect */
+.timeline ul li:hover {
+  box-shadow: 0px 0px 20px 10px rgba(138, 43, 226, 0.5); /* Purple glow */
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+.timeline-content h1 {
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 35px;
+  margin-bottom: 15px;
+}
+
+.timeline-content p {
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 300;
+}
+
+
+
+.timeline-content .btn {
+  margin-top: 20px;
+  padding: 12px 24px; /* Increased padding */
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 50px; /* Rounded button */
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.timeline-content .btn:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb); /* Reverse gradient on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: gray;
+  }
+
+  .timeline ul li {
+    width: 50%;
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+    border-radius: 20px 0px 20px 20px;
+  }
+
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+    border-radius: 0px 20px 20px 20px;
+  }
+
+  .timeline ul li::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: gray;
+    top: 0px;
+  }
+
+  .timeline ul li:nth-child(odd)::before {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+
+  .timeline ul li:nth-child(even)::before {
+    transform: translate(-50%, -50%);
+    left: -30px;
+  }
+
+  .timeline ul li:hover::before {
+    background-color: 6600CC;
+  }
+}
